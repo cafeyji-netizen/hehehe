@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>for my baby ♡</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Parisienne&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #fff;
+    color: #292929;
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =================================
+   FIRST PAGE
+================================= */
+
+#firstPage {
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px 18px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255,255,255,0.7) 0,
+            rgba(255,255,255,0) 25%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(255,255,255,0.6) 0,
+            rgba(255,255,255,0) 28%
+        ),
+        #ffdce7;
+
+    transition: opacity 0.8s ease;
+}
+
+
+/* soft background hearts */
+
+#firstPage::before {
+
+    content: "♡   ♡   ˚   ♡   ✦   ♡   ˚   ♡";
+
+    position: absolute;
+
+    top: 8%;
+
+    left: -10px;
+
+    width: 110%;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    letter-spacing: 18px;
+
+    color: rgba(255,255,255,0.7);
+
+    transform: rotate(-7deg);
+
+    pointer-events: none;
+}
+
+
+#firstPage::after {
+
+    content: "♡       ✦       ♡       ✦       ♡";
+
+    position: absolute;
+
+    bottom: 8%;
+
+    right: -40px;
+
+    width: 110%;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    letter-spacing: 13px;
+
+    color: rgba(255,255,255,0.65);
+
+    transform: rotate(6deg);
+
+    pointer-events: none;
+}
+
+
+/* little floating circles */
+
+.petal {
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.55);
+
+    pointer-events: none;
+}
+
+.petal1 {
+    top: 22%;
+    left: 12%;
+}
+
+.petal2 {
+    top: 35%;
+    right: 10%;
+    width: 5px;
+    height: 5px;
+}
+
+.petal3 {
+    bottom: 24%;
+    left: 15%;
+    width: 5px;
+    height: 5px;
+}
+
+.petal4 {
+    bottom: 35%;
+    right: 16%;
+}
+
+
+/* =================================
+   SNOOPY
+================================= */
+
+.snoopy-main {
+
+    width: min(88vw, 420px);
+
+    max-height: 63vh;
+
+    object-fit: contain;
+
+    position: relative;
+
+    z-index: 2;
+
+    cursor: pointer;
+
+    animation:
+        gentleFloat 3.5s ease-in-out infinite;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.snoopy-main:hover {
+    transform: scale(1.025);
+}
+
+
+.snoopy-main:active {
+    transform: scale(0.95);
+}
+
+
+/* =================================
+   FIRST PAGE TEXT
+================================= */
+
+.intro-text {
+
+    position: relative;
+
+    z-index: 3;
+
+    margin-top: 12px;
+
+    font-family: "Parisienne", cursive;
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    color: #5e4750;
+
+    letter-spacing: 0.2px;
+
+    animation:
+        textFloat 3s ease-in-out infinite;
+}
+
+
+.intro-heart {
+
+    position: relative;
+
+    z-index: 3;
+
+    margin-top: 2px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+
+    font-weight: 300;
+
+    color: #8e6470;
+}
+
+
+/* =================================
+   LETTER PAGE
+================================= */
+
+#letterPage {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 55px 20px 70px;
+
+    background: #fffafa;
+
+    animation: pageAppear 0.9s ease;
+}
+
+
+.letter-container {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    background: #fff;
+
+    padding: 40px 34px 70px;
+
+    border: 1px solid #eadde1;
+
+    box-shadow: 5px 5px 0 #333;
+}
+
+
+/* decorations */
+
+.decoration {
+
+    position: absolute;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+
+    color: #777;
+}
+
+.decoration.one {
+    top: 12px;
+    left: 15px;
+}
+
+.decoration.two {
+    top: 12px;
+    right: 15px;
+}
+
+.decoration.three {
+    bottom: 15px;
+    left: 15px;
+}
+
+.decoration.four {
+    bottom: 15px;
+    right: 15px;
+}
+
+
+/* =================================
+   LETTER HEADER
+================================= */
+
+.header {
+
+    text-align: center;
+
+    margin-bottom: 32px;
+}
+
+
+.header-small {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #999;
+
+    margin-bottom: 8px;
+}
+
+
+.header h1 {
+
+    margin: 0;
+
+    font-family: "Parisienne", cursive;
+
+    font-size: 39px;
+
+    font-weight: 400;
+
+    color: #292929;
+}
+
+
+.header p {
+
+    margin: 8px 0 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+
+    font-style: italic;
+
+    color: #999;
+}
+
+
+/* =================================
+   LETTER
+================================= */
+
+.letter {
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.85;
+
+    color: #444;
+}
+
+
+.letter p {
+
+    margin: 0 0 23px;
+}
+
+
+/* =================================
+   ENDING
+================================= */
+
+.ending {
+
+    text-align: center;
+
+    margin-top: 32px;
+}
+
+
+.love {
+
+    font-family: "Parisienne", cursive;
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+    color: #333;
+
+    margin-bottom: 7px;
+}
+
+
+.kisses {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+    color: #555;
+}
+
+
+/* =================================
+   SMALL SNOOPY
+================================= */
+
+.corner-snoopy {
+
+    position: absolute;
+
+    width: 78px;
+    height: 78px;
+
+    object-fit: contain;
+
+    right: 10px;
+    bottom: 8px;
+
+    transform: rotate(4deg);
+
+    opacity: 0.95;
+
+    pointer-events: none;
+}
+
+
+/* =================================
+   ANIMATIONS
+================================= */
+
+@keyframes gentleFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+@keyframes textFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
+
+}
+
+
+@keyframes pageAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+    #firstPage {
+        padding: 18px;
+    }
+
+    .snoopy-main {
+        width: 94vw;
+        max-height: 61vh;
+    }
+
+    .intro-text {
+        font-size: 23px;
+    }
+
+    #letterPage {
+        padding: 30px 14px 55px;
+    }
+
+    .letter-container {
+        padding: 34px 21px 70px;
+        box-shadow: 4px 4px 0 #333;
+    }
+
+    .header h1 {
+        font-size: 35px;
+    }
+
+    .letter {
+        font-size: 13.5px;
+        line-height: 1.8;
+    }
+
+    .corner-snoopy {
+        width: 68px;
+        height: 68px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     FIRST PAGE
+================================= -->
+
+<section id="firstPage">
+
+    <div class="petal petal1"></div>
+    <div class="petal petal2"></div>
+    <div class="petal petal3"></div>
+    <div class="petal petal4"></div>
+
+
+    <img
+        src="Untitled277_20261024203143.png"
+        class="snoopy-main"
+        onclick="openLetter()"
+        alt="Snoopy"
+    >
+
+
+    <div class="intro-text">
+        hi babyyy click snoopy to open and volume up please :)
+    </div>
+
+
+    <div class="intro-heart">
+        ♡
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     LETTER PAGE
+================================= -->
+
+<section id="letterPage">
+
+    <div class="letter-container">
+
+        <div class="decoration one">♡</div>
+        <div class="decoration two">✦</div>
+        <div class="decoration three">♡</div>
+        <div class="decoration four">✦</div>
+
+
+        <div class="header">
+
+            <div class="header-small">
+                a little letter for you
+            </div>
+
+            <h1>
+                for my bebi
+            </h1>
+
+            <p>
+                ♡♡♡
+            </p>
+
+        </div>
+
+
+        <div class="letter">
+
+            <p>
+                hey baby, we both know that October has been tough for us.
+                we had lots of away, tampuhan, but please know that despite
+                all of that, wala akong naiwang tampo sayo and i hope ganon
+                din nararamdaman mo :) i don't want any of those little fights
+                or misunderstandings to change how i see you or how much i love
+                you. alam kong hindi naman magiging perfect palagi yung
+                relationship natin, and that's okay, as long as we both continue
+                to understand, communicate, and choose each other
+            </p>
+
+
+            <p>
+                im still really thankful for you and for everything we have.
+                i know that you’re trying to do your best para i-fulfill yung
+                promises mo sakin and im happy for your progress. im sorry if
+                im the cause of your tampos, mahal :( sorry if nasaktan kita
+                because of my actions. i never meant to hurt you, and i’ll try
+                my best to be more careful with my words and actions. i hope
+                we can keep growing together, learn from our mistakes, and
+                love each other better. no matter how tough some days get,
+                i still want you, i still choose you, and i’ll always be
+                grateful na i’m with you.
+            </p>
+
+        </div>
+
+
+        <div class="ending">
+
+            <div class="love">
+                i love you mahal !
+            </div>
+
+            <div class="kisses">
+                MWAA MWAA MWAA 
+            </div>
+
+        </div>
+
+
+        <img
+            src="Untitled277_20261024203143.png"
+            class="corner-snoopy"
+            alt=""
+        >
+
+    </div>
+
+</section>
+
+
+
+<audio id="music" loop preload="auto">
+
+    <source
+        src="Libu-Libong Buwan (Uuwian).mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+
+<script>
+
+const music =
+    document.getElementById("music");
+
+const firstPage =
+    document.getElementById("firstPage");
+
+const letterPage =
+    document.getElementById("letterPage");
+
+
+function openLetter() {
+
+    music.play().catch(function(error) {
+        console.log("Music:", error);
+    });
+
+
+    firstPage.style.opacity = "0";
+
+
+    setTimeout(function() {
+
+        firstPage.style.display = "none";
+
+        letterPage.style.display = "block";
+
+        window.scrollTo(0, 0);
+
+    }, 700);
+
+}
+
+</script>
+
+
+</body>
+</html>
